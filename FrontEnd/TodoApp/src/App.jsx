@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import TodoApp from './TodoApp'
-import Navbar from './components/Navbar'
-import Todo from './components/Todo'
+import Navbar from "./components/Navbar";
+import Todo from "./components/Todo";
 
 function App() {
-
   return (
-    <>
-    <Navbar/>
-     <Todo/>
-    </>
-  )
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <Navbar />
+      <Todo />
+    </div>
+  );
 }
 
-export default App
+export default App;

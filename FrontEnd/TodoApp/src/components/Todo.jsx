@@ -12,8 +12,10 @@ import {
   X,
 } from "lucide-react";
 
+const apiBaseUrl = import.meta.env.VITE_API_URL || "https://todo-app-nvav.onrender.com";
+
 const api = axios.create({
-  baseURL: `${import.meta.env.VITE_API_URL}/api/v1`,
+  baseURL: `${apiBaseUrl}/api/v1`,
 });
 
 const initialForm = {

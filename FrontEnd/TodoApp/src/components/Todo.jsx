@@ -80,7 +80,7 @@ const Todo = () => {
         setActiveTodoId(items[0]._id);
       }
     } catch (requestError) {
-      setError("Couldn't load your todos. Check that the backend is running on port 4000.");
+      setError("Couldn't load your todos. Check that the backend URL is configured and the service is live.");
     } finally {
       setIsLoading(false);
     }

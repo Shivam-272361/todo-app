@@ -5,8 +5,17 @@ require("dotenv").config();
 
 const PORT = process.env.PORT || 4000;
 
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.json());
+
+app.get("/health", (_req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Service is healthy",
+    });
+});
 
 const todoRoutes = require("./routers/todoRouter");
 app.use("/api/v1", todoRoutes);

@@ -16,6 +16,9 @@ app.get("/health", (_req, res) => {
         message: "Service is healthy",
     });
 });
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
 
 const todoRoutes = require("./routers/todoRouter");
 app.use("/api/v1", todoRoutes);
